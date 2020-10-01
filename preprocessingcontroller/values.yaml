@@ -40,6 +40,9 @@ service:
   type: ClusterIP
   port: 6600
 
+rbac:
+  create: true
+
 ingress:
   enabled: false
   annotations: {}
