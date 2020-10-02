@@ -52,8 +52,15 @@ spec:
               port: 6600
             initialDelaySeconds: 10
             periodSeconds: 10
+          volumeMounts:
+            - name: csv-data
+              mountPath: /home/data
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: csv-data
+          hostPath:
+            path: { { - toYaml .Values.persistence.hostPath | nindent 12 } }
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

@@ -40,6 +40,9 @@ service:
   type: ClusterIP
   port: 6600
 
+persistence:
+  hostPath: /files #/home/fatemeh/go/sample_data
+
 rbac:
   create: true
 
