@@ -3,6 +3,16 @@ entries:
   preprocessingcontroller:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2020-10-02T10:17:42.362110666-07:00"
+    description: A Helm chart for Kubernetes
+    digest: 1b9c3887c27d8b02255d05e337c62e4168ccca14d10ff48202990748f6cca709
+    name: preprocessingcontroller
+    type: application
+    urls:
+    - https://github.com/cumulusproject/helm-charts/releases/download/preprocessingcontroller-0.1.2/preprocessingcontroller-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2020-10-01T13:13:14.973632405-07:00"
     description: A Helm chart for Kubernetes
     digest: b12449cc7b5ed0da33f6f88baf97b0a1d081baa94aaa1956a2287f2959d1d348
