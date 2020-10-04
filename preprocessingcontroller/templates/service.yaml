@@ -3,13 +3,19 @@ kind: Service
 metadata:
   name: {{ include "preprocessingcontroller.fullname" . }}
   labels:
+    app: {{ template "preprocessingcontroller.fullname" . }}
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
     {{- include "preprocessingcontroller.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
-  ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
   selector:
+    name: {{ template "preprocessingcontroller.fullname" . }}
+    app: preprocessingcontroller
+    type: controller
+    resource: {{ template "preprocessingcontroller.fullname" . }}
     {{- include "preprocessingcontroller.selectorLabels" . | nindent 4 }}
+  ports:
+    - name: grpc
+      port: {{ .Values.service.port }}
