@@ -41,7 +41,7 @@ service:
   port: 6600
 
 persistence:
-  hostPath: /files #/home/fatemeh/go/sample_data
+  hostPath: /files 
 
 rbac:
   create: true
