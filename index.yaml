@@ -44,6 +44,16 @@ entries:
   preprocessingengine:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2020-10-10T12:15:29.559176154-07:00"
+    description: A Helm chart for Kubernetes
+    digest: 224175013492d41257a4ec8d8d4ed9b6ef902b9f5848572c3ed7b4f187f57efc
+    name: preprocessingengine
+    type: application
+    urls:
+    - https://github.com/cumulusproject/helm-charts/releases/download/preprocessingengine-0.1.2/preprocessingengine-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2020-10-03T17:58:29.613118855-07:00"
     description: A Helm chart for Kubernetes
     digest: 10b15dc1db953fe1727678d150d60746c04dfcbd702b45420e43f2c8b24f61e1
